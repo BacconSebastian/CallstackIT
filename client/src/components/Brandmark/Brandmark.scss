@@ -1,0 +1,13 @@
+@import '../../App.scss';
+
+.brandmark {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 4rem;
+    margin-right: .5rem;
+  }
+}

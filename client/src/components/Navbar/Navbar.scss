@@ -1,0 +1,18 @@
+@import '../../App.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .25rem 6rem .25rem 2rem;
+  background-color: $third-color;
+
+  ul {
+    display: flex;
+    color: $second-color;
+
+    li {
+      margin: 1rem;
+    }
+  }
+}

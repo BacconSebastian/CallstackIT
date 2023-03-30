@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap');
+
+$first-color: #FFFFFF;
+$second-color: #00498A;
+$third-color: #F0F0F0;
+$fourth-color: #00BFFF;
+$shadow: #01040434;
+$lightness: #fffa96;
+
+html,
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: $second-color;
+    cursor: pointer;
+}
+
+p {
+    cursor: default;
+}
+
+li {
+    list-style: none;
+}
+
+.app {
+    min-height: 100vh;
+
+    background-color: white;
+    color: $first-color;
+}
+
+// Shared animations
+
+.pulse {
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.75;
+    }
+}
