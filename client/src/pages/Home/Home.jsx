@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (scrollY >= 60) {
+    if (scrollY >= 30) {
       setNavbarStyle("fixed");
     } else {
       setNavbarStyle("");
@@ -30,7 +30,7 @@ const Home = () => {
     <div className="home">
       <Navbar />
       {navbarStyle === "fixed" && <Navbar navbarStyle={navbarStyle} />}
-      {/* <Approach /> */}
+      <Approach />
     </div>
   );
 };
