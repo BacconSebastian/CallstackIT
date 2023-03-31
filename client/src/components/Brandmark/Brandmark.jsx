@@ -1,14 +1,19 @@
-import CallStackIT from "../../assets/shared/callstack-icon.png"
+import CallStackIT from "../../assets/shared/callstack-icon.png";
+import CallStackITWhite from "../../assets/shared/callstack-icon-white.png";
 
-import "./Brandmark.scss"
+import "./Brandmark.scss";
 
-const Brandmark = () => {
+const Brandmark = ({ navbarStyle }) => {
   return (
-    <a className="brandmark">
-      <img className="icon" src={CallStackIT} alt="CallStackIT Icon" />
+    <a href="/" className={"brandmark " + (navbarStyle ? navbarStyle : "")}>
+      {navbarStyle === "fixed" ? (
+        <img className="icon" src={CallStackIT} alt="CallStackIT Icon" />
+      ) : (
+        <img className="icon" src={CallStackITWhite} alt="CallStackIT Icon" />
+      )}
       CallStack-IT
     </a>
-  )
-}
+  );
+};
 
-export default Brandmark
+export default Brandmark;

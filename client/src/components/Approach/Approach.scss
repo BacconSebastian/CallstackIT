@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.approach {
+  padding: 8rem 6rem 2rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 8rem);
+  height: 100vh;
+  background-color: $third-color;
+
+  h2 {
+    font-size: 3rem;
+    color: $second-color;
+  }
+}

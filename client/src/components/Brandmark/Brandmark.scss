@@ -1,13 +1,26 @@
 @import '../../App.scss';
 
 .brandmark {
+  color: $first-color;
   font-size: 1.5rem;
   font-weight: 600;
   display: flex;
   align-items: center;
 
   .icon {
-    width: 4rem;
+    width: 3rem;
     margin-right: .5rem;
   }
+}
+
+@media (min-width: 768px) {
+  .brandmark {
+    .icon {
+      width: 4rem;
+    }
+  }
+}
+
+.brandmark.fixed {
+  color: $second-color;
 }
