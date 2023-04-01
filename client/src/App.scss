@@ -9,13 +9,13 @@ $lightness: #fffa96;
 
 html,
 * {
+    scroll-behavior: smooth;
+
     padding: 0;
     margin: 0;
 
     font-family: 'Rubik', sans-serif;
     font-size: 14px;
-
-    scroll-behavior: smooth;
 }
 
 h2 {
@@ -44,6 +44,7 @@ li {
     color: $first-color;
 
     overflow-x: hidden;
+    cursor: url(./assets/shared/cursor.png) 16 16, auto;
 }
 
 .card-container {
@@ -63,6 +64,8 @@ li {
         background-color: $third-color;
         color: $second-color;
         filter: drop-shadow(0 0 20px $shadow);
+        transition: all ease 1s;
+        cursor: default;
 
         h3 {
             font-weight: bold;
@@ -85,6 +88,10 @@ li {
         p {
             text-align: center;
         }
+    }
+
+    .card:hover {
+        transform: scale(1.05);
     }
 }
 

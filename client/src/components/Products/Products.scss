@@ -10,7 +10,18 @@
   background-color: $second-color;
 
   h2 {
-    color: $first-color;
-    filter: drop-shadow(2px 2px 0 $fourth-color);
+    span {
+      font-size: 3rem;
+      color: $first-color;
+      filter: drop-shadow(2px 2px 0 $fourth-color);
+      opacity: 0.9;
+      transition: all ease .5s;
+    }
+    
+    span:hover {
+      color: $fourth-color;
+      filter: drop-shadow(2px 2px 0 $first-color);
+      opacity: 1;
+    }
   }
 }
