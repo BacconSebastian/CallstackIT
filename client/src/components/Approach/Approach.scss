@@ -10,9 +10,8 @@
   background-color: $third-color;
 
   h2 {
-    font-size: 3rem;
     color: $second-color;
-    margin-bottom: 2rem;
+    filter: drop-shadow(2px 2px 0 $fourth-color);
   }
 
   .data-approach {
@@ -29,6 +28,7 @@
 @media (min-width: 768px) {
   .approach {
     padding: 10rem 2rem 2rem 6rem;
+    width: calc(100% - 8rem);
     height: calc(100vh - 12rem);
   }
 }

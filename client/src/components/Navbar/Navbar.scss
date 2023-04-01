@@ -4,6 +4,7 @@
   .web {
     display: none;
     height: 60px;
+    z-index: 5;
   }
 
   .mobile {
@@ -17,6 +18,7 @@
     height: 60px;
     padding: 0 2rem;
     background-color: $second-color;
+    z-index: 5;
 
     .close {
       position: absolute;
@@ -110,6 +112,10 @@
         li {
           margin-left: 2rem;
           cursor: pointer;
+
+          a {
+            color: $first-color;
+          }
         }
 
         li:first-child {
@@ -123,14 +129,18 @@
     display: block;
 
     .web {
-      animation: appear 1s;
+      animation: appear .5s;
       position: fixed;
       top: 0;
       left: 0;
       background-color: $first-color;
 
       ul {
-        color: $second-color;
+        li {
+          a {
+            color: $second-color;
+          }
+        }
       }
     }
   }

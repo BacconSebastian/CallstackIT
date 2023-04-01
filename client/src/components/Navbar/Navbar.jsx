@@ -7,7 +7,7 @@ import CloseMenu from "../../assets/shared/close-menu.svg";
 
 import "./Navbar.scss";
 
-const Navbar = ({ navbarStyle }) => {
+const Navbar = ({ navbarStyle, headNavbar }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const handleMobileMenu = () => {
@@ -15,13 +15,13 @@ const Navbar = ({ navbarStyle }) => {
   };
 
   return (
-    <nav className={"navbar " + (navbarStyle ? navbarStyle : "")}>
+    <nav id={headNavbar ? "head-navbar" : ""} className={"navbar " + (navbarStyle ? navbarStyle : "")}>
       <div className="web">
         <Brandmark navbarStyle={navbarStyle} />
         <ul>
-          <li className={navbarStyle ? "" : "pulse"}>Products</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li className={navbarStyle ? "" : "pulse"}><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div className="mobile">

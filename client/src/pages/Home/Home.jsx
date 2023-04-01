@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import Approach from "../../components/Approach/Approach";
 import Navbar from "../../components/Navbar/Navbar";
+import Products from "../../components/Products/Products";
+import About from "../../components/About/About";
+import Contact from "../../components/Contact/Contact";
 
 import "./Home.scss";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -12,9 +16,7 @@ const Home = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let scroll = window.scrollY;
-      if (scroll < 120) {
-        setScrollY(scroll);
-      }
+      setScrollY(scroll);
     });
   }, []);
 
@@ -28,9 +30,13 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Navbar />
+      <Navbar headNavbar={true} />
       {navbarStyle === "fixed" && <Navbar navbarStyle={navbarStyle} />}
       <Approach />
+      <Products />
+      <About />
+      <Contact />
+      <Footer />
     </div>
   );
 };

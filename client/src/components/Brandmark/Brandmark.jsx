@@ -5,7 +5,7 @@ import "./Brandmark.scss";
 
 const Brandmark = ({ navbarStyle }) => {
   return (
-    <a href="/" className={"brandmark " + (navbarStyle ? navbarStyle : "")}>
+    <a href="#head-navbar" className={"brandmark " + (navbarStyle ? navbarStyle : "")}>
       {navbarStyle === "fixed" ? (
         <img className="icon" src={CallStackIT} alt="CallStackIT Icon" />
       ) : (

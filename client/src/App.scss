@@ -18,6 +18,11 @@ html,
     scroll-behavior: smooth;
 }
 
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
 a {
     text-decoration: none;
     color: $second-color;
@@ -41,6 +46,48 @@ li {
     overflow-x: hidden;
 }
 
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    // animation: horizontal-movement 15s infinite;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        width: calc(30% - 4rem);
+        padding: 2rem;
+        background-color: $third-color;
+        color: $second-color;
+        filter: drop-shadow(0 0 20px $shadow);
+
+        h3 {
+            font-weight: bold;
+            margin-bottom: .5rem;
+            font-size: 1.75rem;
+        }
+
+        hr {
+            margin-bottom: 1rem;
+            width: 100%;
+
+        }
+
+        img {
+            width: 60%;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
 // Shared animations
 
 .pulse {
@@ -60,5 +107,37 @@ li {
 
     100% {
         opacity: 0.85;
+    }
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+@keyframes horizontal-movement {
+    0% {
+        padding-left: 1rem;
+    }
+
+    25% {
+        padding: 0;
+    }
+
+    50% {
+        padding-right: 1rem;
+    }
+
+    75% {
+        padding: 0;
+    }
+
+    100% {
+        padding-left: 1rem;
     }
 }
